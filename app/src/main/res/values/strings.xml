@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pinboard</string>
+    <string name="event_date_template">%s - %s</string>
+    <string name="flight_notice">Flight Notice</string>
+    <string name="flight_title_template">You got a flight at gate %s</string>
+    <string name="move_route_template">%s -> %s</string>
+    <string name="move_route_start_template">Departing from %s</string>
+    <string name="move_route_end_template">Going to %s</string>
+    <string name="move_estimate_template">It will take %s</string>
+</resources>
