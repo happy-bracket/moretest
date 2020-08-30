@@ -1,4 +1,4 @@
-package ru.happybracket.moretest.modelviews
+package ru.happybracket.moretest.move
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,7 +10,6 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import kotlinx.android.synthetic.main.item_move.view.*
 import ru.happybracket.moretest.R
-import ru.happybracket.moretest.models.Move
 
 @ModelView(autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT)
 class MoveView : CardView {

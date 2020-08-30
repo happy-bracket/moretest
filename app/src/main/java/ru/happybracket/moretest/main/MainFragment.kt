@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.epoxy.EpoxyItemSpacingDecorator
 import kotlinx.android.synthetic.main.fragment_main.*
 import ru.happybracket.moretest.R
-import ru.happybracket.moretest.models.Event
-import ru.happybracket.moretest.models.Move
-import ru.happybracket.moretest.models.Notice
+import ru.happybracket.moretest.event.Event
+import ru.happybracket.moretest.move.Move
+import ru.happybracket.moretest.notice.Notice
 import java.util.*
 
 class MainFragment : Fragment() {

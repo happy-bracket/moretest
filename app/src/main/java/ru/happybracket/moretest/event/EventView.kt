@@ -1,4 +1,4 @@
-package ru.happybracket.moretest.modelviews
+package ru.happybracket.moretest.event
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,7 +10,7 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import kotlinx.android.synthetic.main.item_event.view.*
 import ru.happybracket.moretest.R
-import ru.happybracket.moretest.models.Event
+import ru.happybracket.moretest.event.Event
 import java.text.DateFormat
 import java.util.*
 

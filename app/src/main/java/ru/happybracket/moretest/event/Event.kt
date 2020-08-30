@@ -1,4 +1,4 @@
-package ru.happybracket.moretest.models
+package ru.happybracket.moretest.event
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

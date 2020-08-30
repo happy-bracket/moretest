@@ -1,9 +1,9 @@
 package ru.happybracket.moretest.main
 
 import com.airbnb.epoxy.EpoxyController
-import ru.happybracket.moretest.models.Event
-import ru.happybracket.moretest.models.Move
-import ru.happybracket.moretest.models.Notice
+import ru.happybracket.moretest.event.Event
+import ru.happybracket.moretest.move.Move
+import ru.happybracket.moretest.notice.Notice
 import ru.happybracket.moretest.modelviews.eventView
 import ru.happybracket.moretest.modelviews.moveView
 import ru.happybracket.moretest.modelviews.noticeView

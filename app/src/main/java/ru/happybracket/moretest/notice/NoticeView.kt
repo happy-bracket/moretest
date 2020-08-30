@@ -1,4 +1,4 @@
-package ru.happybracket.moretest.modelviews
+package ru.happybracket.moretest.notice
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,7 +10,6 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import kotlinx.android.synthetic.main.item_notice.view.*
 import ru.happybracket.moretest.R
-import ru.happybracket.moretest.models.Notice
 import java.text.DateFormat
 import java.util.*
 
