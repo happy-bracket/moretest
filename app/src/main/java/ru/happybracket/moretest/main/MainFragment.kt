@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.epoxy.EpoxyItemSpacingDecorator
 import kotlinx.android.synthetic.main.fragment_main.*
+import ru.happybracket.moretest.MainActivity
 import ru.happybracket.moretest.NavigationConfigHolder
 import ru.happybracket.moretest.R
 import ru.happybracket.moretest.event.Event
@@ -32,7 +33,7 @@ class MainFragment : Fragment() {
 
         controller = MainController {
             fragmentManager!!.beginTransaction()
-                .add(R.id.main_container, NavigationConfigHolder.dispatcher.requireFragment(it))
+                .add(R.id.main_container, NavigationConfigHolder.dispatcher.requireFragment(it), MainActivity.DETAILS_FRAGMENT_TAG)
                 .commit()
         }
 

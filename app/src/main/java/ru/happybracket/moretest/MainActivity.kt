@@ -11,7 +11,27 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.main_container, MainFragment(), "ssdasdsfg")
+            .add(R.id.main_container, MainFragment())
             .commit()
+    }
+
+    override fun onBackPressed() {
+        // haha navigation goes brrrr
+        // me lazy
+        if (supportFragmentManager.fragments.size > 1) {
+            supportFragmentManager.findFragmentByTag(DETAILS_FRAGMENT_TAG)
+                ?.let { fragmentToRemove ->
+                    supportFragmentManager.beginTransaction()
+                        .remove(fragmentToRemove)
+                        .commit()
+                }
+
+        } else super.onBackPressed()
+    }
+
+    companion object {
+
+        const val DETAILS_FRAGMENT_TAG = "mdaheh"
+
     }
 }
