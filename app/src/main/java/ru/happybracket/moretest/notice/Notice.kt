@@ -8,4 +8,8 @@ import java.util.*
 data class Notice(
     val flightDate: Date? = null,
     val gate: String? = null
-) : Parcelable
+) : Parcelable {
+
+    companion object
+
+}

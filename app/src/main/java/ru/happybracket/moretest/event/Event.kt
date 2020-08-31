@@ -9,4 +9,8 @@ data class Event(
     val startTime: Date? = null,
     val endTime: Date? = null,
     val name: String? = null
-) : Parcelable
+) : Parcelable {
+
+    companion object
+
+}

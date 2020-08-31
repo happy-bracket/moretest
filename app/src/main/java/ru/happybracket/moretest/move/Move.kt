@@ -8,4 +8,8 @@ data class Move(
     val fromPlace: String? = null,
     val toPLace: String? = null,
     val estimateTime: Double? = null
-) : Parcelable
+) : Parcelable {
+
+    companion object
+
+}

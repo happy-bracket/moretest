@@ -1,12 +1,8 @@
 package ru.happybracket.moretest.main
 
 import com.airbnb.epoxy.EpoxyController
-import ru.happybracket.moretest.event.Event
-import ru.happybracket.moretest.move.Move
-import ru.happybracket.moretest.notice.Notice
-import ru.happybracket.moretest.modelviews.eventView
-import ru.happybracket.moretest.modelviews.moveView
-import ru.happybracket.moretest.modelviews.noticeView
+import ru.happybracket.moretest.ModelData
+import ru.happybracket.moretest.NavigationConfigHolder
 
 class MainController(
     private val openScreen: (Any) -> Unit
@@ -20,25 +16,9 @@ class MainController(
     }
 
     override fun buildModels() {
-        items.forEach { model ->
-            when (model) {
-                is Move -> moveView {
-                    id(model.hashCode())
-                    bind(model)
-                    onClick { openScreen(model) }
-                }
-                is Event -> eventView {
-                    id(model.hashCode())
-                    bind(model)
-                    onClick { openScreen(model) }
-                }
-                is Notice -> noticeView {
-                    id(model.hashCode())
-                    bind(model)
-                    onClick { openScreen(model) }
-                }
-            }
-        }
+        items.mapNotNull {
+            NavigationConfigHolder.dispatcher.dispatchModel(ModelData(it, openScreen))
+        }.forEach(::add)
     }
 
 }

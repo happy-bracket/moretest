@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.epoxy.EpoxyItemSpacingDecorator
 import kotlinx.android.synthetic.main.fragment_main.*
+import ru.happybracket.moretest.NavigationConfigHolder
 import ru.happybracket.moretest.R
 import ru.happybracket.moretest.event.Event
 import ru.happybracket.moretest.move.Move
@@ -16,7 +17,7 @@ import java.util.*
 
 class MainFragment : Fragment() {
 
-    private val controller: MainController = MainController {}
+    private lateinit var controller: MainController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +29,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        controller = MainController {
+            fragmentManager!!.beginTransaction()
+                .add(R.id.main_container, NavigationConfigHolder.dispatcher.requireFragment(it))
+                .commit()
+        }
 
         fragment_main_list.layoutManager = LinearLayoutManager(requireContext())
         fragment_main_list.adapter = controller.adapter
